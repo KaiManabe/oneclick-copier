@@ -1,0 +1,91 @@
+/* ---------------------------------------------------------
+ 共通設定
+--------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root{
+    --color-base: rgb(230, 236, 234);
+    --color-text: rgb(20, 54, 43);
+    --color-accent: rgb(93, 202, 166);
+}
+
+
+/* ---------------------------------------------------------
+ 要素セレクタ
+--------------------------------------------------------- */
+html {
+    font-size: 62.5%; 
+    background-color: var(--color-base);    
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1.6rem; 
+    height: 100%;
+}
+
+
+/* ---------------------------------------------------------
+ コピーボタン
+--------------------------------------------------------- */
+.button{
+    height: 3.5em;
+    background-color: var(--color-text);
+    color: var(--color-base);
+
+    font-size: 1.3em;
+    border-radius: 0.25em;
+    padding: 0.25em;
+    margin: 0.5em;
+    display: inline-block;
+
+    cursor: pointer;
+
+    text-align: center;
+    align-content: center;
+}
+
+.clicked{
+    animation: flash-color 0.5s ease-out forwards;
+}
+
+.empty{
+    background-color: var(--color-base);
+    border: solid 2px var(--color-text);
+    color: var(--color-text);
+}
+
+
+/* ---------------------------------------------------------
+ 編集時に使用するテキストボックス
+--------------------------------------------------------- */
+.editing .button-label{
+    display: none;
+}
+
+.input-label,.input-value{
+    display: none;
+    width: 100%;
+}
+
+.editing .input-label,
+.editing .input-value{
+    display: block;
+}
+
+
+
+/* ---------------------------------------------------------
+ トランジション定義
+--------------------------------------------------------- */
+@keyframes flash-color {
+  0% {
+    background-color: var(--color-accent);
+  }
+  100% {
+    background-color: var(--color-text);
+  }
+}
