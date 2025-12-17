@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One click copier</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>One Click Copier</h1>
+    <h3>ボタンを押すと設定されたテキストがクリップボードにコピーされます</h3>
+    <hr>
+
+    <!-- -------------------------------------------------------
+     このtable内にjsがボタンを動的に生成
+    ----------------------------------------------------------->
+    <table id = "buttons">
+        <tbody>
+        </tbody>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- -------------------------------------------------------
+     操作用ボタン
+    ----------------------------------------------------------->
+    <span id = "add-row-button" class = "button empty" style = "width: 7em;">行追加</span>
+    <span id = "add-column-button" class = "button empty" style = "width: 7em;">列追加</span>
+    <br>
+    <br>
+    <span id = "load-button" class = "button empty" style = "width: 7em;">辞書読み込み</span>
+    <span id = "save-button" class = "button empty" style = "width: 7em;">辞書保存</span>
+    <script src="script.js"></script>
+</body>
+</html>
