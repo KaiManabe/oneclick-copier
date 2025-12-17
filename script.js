@@ -79,7 +79,6 @@ function generateTable(){
     // -------------------- 一度テーブルを削除 --------------------
     const table = document.querySelector("#buttons");
     let tbody = document.querySelector("#buttons>tbody");
-
     tbody.remove();
     tbody = document.createElement("tbody");
     table.appendChild(tbody);
@@ -122,7 +121,7 @@ function generateTable(){
                 td.classList.add("empty");
                 label.innerHTML = "+";
             }else{
-                label.innerHTML = g_dict["data"][i][ii]["label"];
+                label.textContent = g_dict["data"][i][ii]["label"];
                 inputLabel.value = g_dict["data"][i][ii]["label"];
                 inputValue.value = g_dict["data"][i][ii]["value"];
             }
@@ -194,6 +193,7 @@ function editMode(row, col){
 function unfocus(event){
     // -------- クリックされたのが編集中のボタンであればreturn --------
     const editing = document.querySelectorAll(".editing");
+    if(editing.length == 0) return;
     let prevent = false;
     editing.forEach((e)=>{
         if(e.contains(event.target)){
