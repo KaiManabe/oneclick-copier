@@ -283,6 +283,7 @@ function addRow(){
     }
     g_dict["data"].push(newRow);
     g_dict["data"][g_dict["rows"] - 1][0] = {"label": "右クリックで編集", "value": ""};
+    generateTable();
 }
 
 
@@ -295,6 +296,7 @@ function addColumn(){
         g_dict["data"][i].push({});
     }
     g_dict["data"][0][g_dict["columns"] - 1] = {"label": "右クリックで編集", "value": ""};
+    generateTable();
 }
 
 
